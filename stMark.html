@@ -1,0 +1,132 @@
+<!DOCTYPE HTML>
+<!--
+	Started 11.4.2020
+    Molly Blank, PhD
+    Test website 
+-->
+
+<html>
+<head>
+<link rel="stylesheet" href=".\scss\particle.css">
+<link rel="stylesheet" href=".\css\style.css">
+<link href=".\css\gallery.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<header id = "main-header">
+    <h1> St Mark </h1>
+
+    <hr>
+
+    <!-- <p> The crucial difference between kirigami and its cousin, origami, is the use of cutting as well as folding to greate geometric forms from a single sheet of paper.</p> -->
+    <p> A second kirigami effort of a favorite Seattle landmark. </p>
+    
+    <nav id = "navbar"> 
+      <ul>
+        <li> <a href = "homeSweetHome.html">Prev</a>> </li>  
+        <li> <a href = "index.html">Home</a>> </li>
+        <li> <a href = "index.html">Next</a>> </li>  
+      </ul>
+  </nav>
+
+</header>
+
+<body>
+
+  <div class="page-bg">
+    <div class="animation-wrapper">
+        <div class="particle particle-1"></div>
+        <div class="particle particle-2"></div>
+        <div class="particle particle-3"></div>
+        <div class="particle particle-4"></div>
+    </div>
+  </div>
+
+    <!-- Slideshow container -->
+    <div class="slideshow-container">
+
+        <!-- Full-width images with number and caption text -->
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 5</div>
+          <img src="./images/stMark/final2.jpg" style="width:100%">
+          <div class="text">The final product</div>
+          </div>
+
+        <div class="mySlides fade">
+            <div class="numbertext">2 / 5</div>
+            <img src="./images/stMark/photo.jpg" style="width:100%">
+            <div class="text">The subject structure</div>
+        </div>
+
+        <div class="mySlides fade">
+        <div class="numbertext">3 / 5</div>
+        <img src="./images/stMark/drawing.jpg" style="width:100%">
+        <div class="text">My doodle</div>
+        </div>
+
+        <div class="mySlides fade">
+        <div class="numbertext">4 / 5</div>
+        <img src="./images/stMark/lines.jpg" style="width:100%">
+        <div class="text">The svg rendering kirigami'd</div>
+        </div>
+
+        <div class="mySlides fade">
+        <div class="numbertext">5 / 5</div>
+        <img src="./images/stMark/cut.jpg" style="width:100%">
+        <div class="text">Cutout</div>
+        </div>
+
+
+
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <br>
+
+    <!-- The dots/circles -->
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+</script>
+
+
+
+

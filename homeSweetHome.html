@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Started 11.4.2020
+    Molly Blank, PhD
+    Test website 
+-->
+
+<html>
+<head>
+<link rel="stylesheet" href=".\scss\particle.css">
+<link rel="stylesheet" href=".\css\style.css">
+<link href=".\css\gallery.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<header id = "main-header">
+    <h2> Home Sweet Home </h2>
+
+    <hr>
+
+    <!-- <p> The crucial difference between kirigami and its cousin, origami, is the use of cutting as well as folding to greate geometric forms from a single sheet of paper.</p> -->
+    <p> This is a first effort toward an original kirigami design, after becoming smitten with a book that <a href = "https://www.amazon.com/Frank-Lloyd-Wright-Paper-Models/dp/1786270064/" target="_blank"> translates iconic Frank Lloyd Wright buildings </a> into stunning pieces with this cut-and-fold style. </p>
+    
+    <nav id = "navbar"> 
+      <ul>
+        <li> <a href = "retroreflectives.html">Prev</a>> </li>  
+        <li> <a href = "index.html">Home</a>> </li>
+        <li> <a href = "stMark.html">Next</a>> </li>  
+      </ul>
+  </nav>
+
+</header>
+
+
+<body>
+
+    <div class="page-bg">
+      <div class="animation-wrapper">
+          <div class="particle particle-1"></div>
+          <div class="particle particle-2"></div>
+          <div class="particle particle-3"></div>
+          <div class="particle particle-4"></div>
+      </div>
+    </div>
+
+<!-- Slideshow container -->
+<div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 4</div>
+      <img src="./images/kirigami/final.jpg" style="width:100%">
+      <div class="text">The final product</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 4</div>
+      <img src="./images/kirigami/house.jpg" style="width:100%">
+      <div class="text">The subject structure</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 4</div>
+      <img src="./images/kirigami/lines.jpg" style="width:100%">
+      <div class="text">The svg rendering kirigami'd</div>
+    </div>
+
+    <div class="mySlides fade">
+      <div class="numbertext">4 / 4</div>
+      <img src="./images/kirigami/cut.jpg" style="width:100%">
+      <div class="text">Initial folds complete</div>
+    </div>
+
+    <!-- Next and previous buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+  <br>
+
+  <!-- The dots/circles -->
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+  </div>
+
+
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+  
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+  
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+  
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+  }
+  </script>
+
+
+</body>
+
+</html>
