@@ -1,0 +1,61 @@
+* {box-sizing: border-box}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.flexGallery-container {
+    display:flex;
+    margin:auto;
+    width:85%;
+    flex-wrap: wrap;
+}
+
+.flexGallery-container div {
+    padding: 40px;
+    border: 2px white solid;
+    margin: 15px;
+    flex-direction:row;
+    border-radius:25px;
+
+}
+
+.box1{
+    flex:1;
+    background-image: url("../images/fractalDark.png");
+    background-position:center center; 
+    background-size: auto;
+}
+    .box1:hover{
+        background-image: url("../images/fractalLight.png");
+        background-size: auto;
+    }
+
+.box2{
+    flex:1;
+    background-image: url("../images/genesDark.jpg");
+    background-position:center center; 
+    background-size: auto;
+}
+    .box2:hover{
+        background-image: url("../images/genesLight.jpg");
+        background-size: auto;
+    }
+
+.box3{
+    flex:2;
+    background-image: url("../images/reflective/demon1.jpg");
+    background-position:center center; 
+    background-size: 380px 260px;
+}
+    .box3:hover{
+        background-image: url("../images/reflective/demon2.jpg");
+    }
+
+.box4{
+    flex:3;
+    background-image: url("../images/reflective/sparrow1.jpg");
+    background-position:center center; 
+    background-size: 380px 260px;
+}
+    .box4:hover{
+        background-image: url("../images/reflective/sparrow2.jpg");
+    }
